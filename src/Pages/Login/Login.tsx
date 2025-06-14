@@ -8,6 +8,7 @@ import loginImg from '../../assets/Images/loginImg.png';
 import * as Yup from 'yup';
 import { useNavigate } from "react-router-dom";
 import SocialMediaOptions from "../Components/SocialMediaOptions";
+import { toast } from "react-toastify";
 
 
 const validationSchema = Yup.object().shape({
@@ -26,6 +27,7 @@ const Login = () => {
 
 
   const handleSubmit = (values: any) => {
+    toast.success('Login successful.');
     navigate('/home', { state: values });
   };
 

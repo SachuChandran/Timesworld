@@ -52,7 +52,7 @@ const Header: React.FC<HeaderProps> = ({
                         onChange={(e) => setCountyFilter(e)}
                     />
                 ) : (
-                    <HamburgerMenu items={items} />
+                    <HamburgerMenu items={items} onChange={setCountyFilter} />
                 )}
             </div>
         </div>

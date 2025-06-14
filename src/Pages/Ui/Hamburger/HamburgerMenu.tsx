@@ -4,10 +4,12 @@ import { IoMdMenu } from 'react-icons/io';
 
 interface HamburgerMenuProps {
     items: any[]
+    onChange?: any
 }
 
 const HamburgerMenu: React.FC<HamburgerMenuProps> = ({
-    items
+    items,
+    onChange
 }) => {
 
     const [open, setOpen] = React.useState(false);
@@ -16,7 +18,10 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({
         <div className='w-[200px]'>
             {items?.map((item: any, index: number) => (
                 <div key={index} className='text-[#3D3D3D] text-[16px] font-[700] cursor-pointer py-2 px-4 hover:bg-[#F5F5F5]'
-                    onClick={() => setOpen(false)}
+                    onClick={() => {
+                        onChange(item?.key)
+                        setOpen(false)
+                    }}
                 >{item?.label}</div>
             ))}
         </div>
