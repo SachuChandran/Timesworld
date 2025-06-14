@@ -1,6 +1,5 @@
 import { Col, Row } from "antd"
 import InputLogin from "../Ui/InputLogin"
-import { useState } from "react";
 import { Formik } from "formik";
 import { initialValues } from "./Utils";
 import CustomCheckbox from "../Ui/checkBox/CustomCheckbox";
@@ -25,10 +24,9 @@ const validationSchema = Yup.object().shape({
 const Login = () => {
   const navigate = useNavigate();
 
-  const [formValues, setFormValues] = useState<any>(initialValues);
 
   const handleSubmit = (values: any) => {
-    navigate('/home');
+    navigate('/home', { state: values });
   };
 
   return (
@@ -37,7 +35,7 @@ const Login = () => {
         <Col xs={24} lg={12}>
           <div className="flex items-center justify-center w-full">
             <Formik
-              initialValues={formValues}
+              initialValues={initialValues}
               validationSchema={validationSchema}
               onSubmit={(values) => {
                 handleSubmit(values);

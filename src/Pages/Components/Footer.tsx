@@ -1,4 +1,3 @@
-import React from 'react'
 import SocialMediaOptions from './SocialMediaOptions'
 
 const Footer = () => {
