@@ -4,7 +4,7 @@ import { Formik } from "formik";
 import { initialValues } from "./Utils";
 import CustomCheckbox from "../Ui/checkBox/CustomCheckbox";
 import PrimaryButton from "../Ui/Button/PrimaryButton";
-import loginImg from '../../assets/images/loginImg.png';
+import loginImg from '../../assets/Images/loginImg.png';
 import * as Yup from 'yup';
 import { useNavigate } from "react-router-dom";
 import SocialMediaOptions from "../Components/SocialMediaOptions";
