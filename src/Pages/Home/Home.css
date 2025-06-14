@@ -1,0 +1,35 @@
+.customer-master-wrap {
+    position: relative;
+
+    & .customer-close-button {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+    }
+
+    & .ant-tabs-nav-wrap {
+        padding: 0 20px;
+    }
+
+    & .ant-tabs-tab-active .ant-tabs-tab-btn {
+        color: #3D3D3D !important;
+    }
+
+    & .ant-tabs-tab {
+        color: #8B8B8B !important;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    & .ant-tabs-ink-bar.ant-tabs-ink-bar-animated {
+        background: #3D3D3D;
+        /* width: 42px !important;
+        left: 20.55208px !important; */
+        height: 4px !important;
+    }
+}
+
+.customer-master-wrap .customer-tabs .ant-tabs-nav::before {
+    border-bottom: none !important;
+}
