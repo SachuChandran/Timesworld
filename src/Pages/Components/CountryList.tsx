@@ -5,7 +5,13 @@ import { Col, Row } from 'antd';
 import { useEffect, useState } from 'react';
 import PrimaryButton from '../Ui/Button/PrimaryButton';
 
-const CountryList = () => {
+interface CountryListProps {
+    countyFilter: string;
+}
+
+const CountryList: React.FC<CountryListProps> = ({
+    countyFilter
+}) => {
     const [countries, setCountries] = useState<any[]>([]);
     const [visibleCount, setVisibleCount] = useState(12);
 
@@ -16,8 +22,14 @@ const CountryList = () => {
     );
 
     useEffect(() => {
-        setCountries(CountryListData);
-    }, [CountryListData]);
+        if (countyFilter === '1') {
+            setCountries(CountryListData);
+        } else {
+            const region = countyFilter === '2' ? 'Asia' : countyFilter === '3' ? 'Europe' : '';
+            const filteredData = CountryListData.filter((item) => item.region === region);
+            setCountries(filteredData);
+        }
+    }, [CountryListData, countyFilter]);
 
     const handleLoadMore = () => {
         setVisibleCount(prev => prev + 12);

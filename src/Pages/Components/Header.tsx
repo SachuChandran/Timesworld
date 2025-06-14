@@ -2,11 +2,18 @@ import { Tabs, type TabsProps } from 'antd';
 import { useEffect, useState } from 'react';
 import HamburgerMenu from '../Ui/Hamburger/HamburgerMenu';
 
+interface HeaderProps {
+    setCountyFilter: any
+}
+
 const renderTabBar: TabsProps["renderTabBar"] = (props, DefaultTabBar) => (
     <DefaultTabBar {...props} style={{ backgroundColor: "transparent" }} />
 );
 
-const Header = () => {
+const Header: React.FC<HeaderProps> = ({
+    setCountyFilter
+}) => {
+
     const [screenWidth, setScreenWidth] = useState<number>(window.innerWidth);
 
     useEffect(() => {
@@ -42,6 +49,7 @@ const Header = () => {
                         renderTabBar={renderTabBar}
                         items={items}
                         className="customer-tabs"
+                        onChange={(e) => setCountyFilter(e)}
                     />
                 ) : (
                     <HamburgerMenu items={items} />
