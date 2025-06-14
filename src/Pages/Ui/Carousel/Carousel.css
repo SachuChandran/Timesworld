@@ -1,0 +1,20 @@
+.custom-carousel-dots li {
+    width: 14px !important;
+    height: 14px !important;
+    border-radius: 0px;
+}
+
+.custom-carousel-dots li button {
+    background: #fff !important;
+    opacity: 1 !important;
+    height: 100% !important;
+    border-radius: 50% !important;
+}
+
+.custom-carousel-dots .slick-active button {
+    background: #000 !important;
+}
+
+.custom-carousel-dots .slick-active::after{
+    display: none !important;
+}

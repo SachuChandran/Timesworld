@@ -34,7 +34,7 @@ const Login = () => {
   return (
     <div className="flex items-center justify-center min-h-screen p-4">
       <Row className="w-full max-w-5xl">
-        <Col sm={12}>
+        <Col xs={24} lg={12}>
           <div className="flex items-center justify-center w-full">
             <Formik
               initialValues={formValues}
@@ -91,7 +91,7 @@ const Login = () => {
             </Formik>
           </div>
         </Col>
-        <Col sm={12}>
+        <Col xs={0} lg={12}>
           <div className="flex items-center justify-center w-full h-full">
             <img src={loginImg} alt="loginImg" />
           </div>

@@ -33,3 +33,28 @@
 .customer-master-wrap .customer-tabs .ant-tabs-nav::before {
     border-bottom: none !important;
 }
+
+/* Responsive */
+@media (max-width: 575.98px) {
+    .main-container {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .country-card {
+        height: 68px;
+
+        & img {
+            width: 48px;
+        }
+
+        & h4 {
+            font-size: 16px;
+        }
+
+        & p {
+            font-size: 13px;
+        }
+    }
+}
