@@ -34,7 +34,7 @@ const Header = () => {
     console.log(screenWidth)
     return (
         <div className='flex items-center justify-between'>
-            <p className='text-[24px] font-[700] text-[#3D3D3D] leading-[34px]'>Contries</p>
+            <p className='text-[24px] font-[700] text-[#3D3D3D] leading-[34px]'>Countries</p>
             <div className="customer-master-wrap">
                 {screenWidth > 575.98 ? (
                     <Tabs
